@@ -1,0 +1,14 @@
+C:\Users\adiaz\source\repos\Comprobantes_Electronicos\Comprobantes_Electronicos\bin\Debug\Comprobantes_Electronicos.exe.config
+C:\Users\adiaz\source\repos\Comprobantes_Electronicos\Comprobantes_Electronicos\bin\Debug\Comprobantes_Electronicos.exe
+C:\Users\adiaz\source\repos\Comprobantes_Electronicos\Comprobantes_Electronicos\bin\Debug\Comprobantes_Electronicos.pdb
+C:\Users\adiaz\source\repos\Comprobantes_Electronicos\Comprobantes_Electronicos\obj\Debug\Comprobantes_Electronicos.csprojAssemblyReference.cache
+C:\Users\adiaz\source\repos\Comprobantes_Electronicos\Comprobantes_Electronicos\obj\Debug\Comprobantes_Electronicos.csproj.CoreCompileInputs.cache
+C:\Users\adiaz\source\repos\Comprobantes_Electronicos\Comprobantes_Electronicos\obj\Debug\Comprobantes_Electronicos.exe
+C:\Users\adiaz\source\repos\Comprobantes_Electronicos\Comprobantes_Electronicos\obj\Debug\Comprobantes_Electronicos.pdb
+C:\Users\adiaz\Desktop\Ariangel\Work\Comprobantes electrónicos\Proyecto\Comprobantes_Electronicos\bin\Debug\Comprobantes_Electronicos.exe.config
+C:\Users\adiaz\Desktop\Ariangel\Work\Comprobantes electrónicos\Proyecto\Comprobantes_Electronicos\bin\Debug\Comprobantes_Electronicos.exe
+C:\Users\adiaz\Desktop\Ariangel\Work\Comprobantes electrónicos\Proyecto\Comprobantes_Electronicos\bin\Debug\Comprobantes_Electronicos.pdb
+C:\Users\adiaz\Desktop\Ariangel\Work\Comprobantes electrónicos\Proyecto\Comprobantes_Electronicos\obj\Debug\Comprobantes_Electronicos.csprojAssemblyReference.cache
+C:\Users\adiaz\Desktop\Ariangel\Work\Comprobantes electrónicos\Proyecto\Comprobantes_Electronicos\obj\Debug\Comprobantes_Electronicos.csproj.CoreCompileInputs.cache
+C:\Users\adiaz\Desktop\Ariangel\Work\Comprobantes electrónicos\Proyecto\Comprobantes_Electronicos\obj\Debug\Comprobantes_Electronicos.exe
+C:\Users\adiaz\Desktop\Ariangel\Work\Comprobantes electrónicos\Proyecto\Comprobantes_Electronicos\obj\Debug\Comprobantes_Electronicos.pdb
