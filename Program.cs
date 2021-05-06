@@ -18,7 +18,7 @@ namespace Comprobantes_Electronicos
             //var restApi = new RestApi(GlobalConstants.testAutSemillaUrl);
             //await restApi.GetRequest();
 
-            ////Crear objeto semillaModel usando la respuesta al GetRequest, que tiene formato xml
+            ////Crear objeto semillaModel usando la respuesta del GetRequest, que tiene formato xml
             //var semillaModel = SemillaModel.XmlToObject(restApi.response);
 
 
@@ -26,7 +26,7 @@ namespace Comprobantes_Electronicos
             //Console.ReadLine();
 
             //2)
-            X509Certificate2 cert = new X509Certificate2(@"C:\Users\adiaz\Desktop\Ariangel\Work\ComprobantesElectrónicos\AriangelDazEspaillat-2021-05-05-085635.p12", "password", X509KeyStorageFlags.DefaultKeySet);
+            X509Certificate2 cert = new X509Certificate2(@"C:\Users\adiaz\Desktop\Ariangel\Work\ComprobantesElectrónicos\AriangelDazEspaillat-2021-05-05-085635.p12", "password", X509KeyStorageFlags.Exportable);
             Console.WriteLine(cert);
 
             XmlDocument xmlDoc = new XmlDocument();
@@ -34,7 +34,7 @@ namespace Comprobantes_Electronicos
             xmlDoc.PreserveWhitespace = false;
 
             var xmlSigned = new XmlSigned(xmlDoc, cert);
-            Console.WriteLine(xmlSigned.xmlDocument);
+            Console.WriteLine(xmlSigned.xmlDocument.InnerXml);
 
             Console.ReadLine();
         }
