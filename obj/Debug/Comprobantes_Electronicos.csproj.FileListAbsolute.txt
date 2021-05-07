@@ -19,3 +19,6 @@ C:\Users\adiaz\Desktop\Ariangel\Work\ComprobantesElectrónicos\Proyecto\Comproba
 C:\Users\adiaz\Desktop\Ariangel\Work\ComprobantesElectrónicos\Proyecto\Comprobantes_Electronicos\obj\Debug\Comprobantes_Electronicos.csproj.CoreCompileInputs.cache
 C:\Users\adiaz\Desktop\Ariangel\Work\ComprobantesElectrónicos\Proyecto\Comprobantes_Electronicos\obj\Debug\Comprobantes_Electronicos.exe
 C:\Users\adiaz\Desktop\Ariangel\Work\ComprobantesElectrónicos\Proyecto\Comprobantes_Electronicos\obj\Debug\Comprobantes_Electronicos.pdb
+C:\Users\adiaz\Desktop\Ariangel\Work\ComprobantesElectrónicos\Proyecto\Comprobantes_Electronicos\bin\Debug\Newtonsoft.Json.dll
+C:\Users\adiaz\Desktop\Ariangel\Work\ComprobantesElectrónicos\Proyecto\Comprobantes_Electronicos\bin\Debug\Newtonsoft.Json.xml
+C:\Users\adiaz\Desktop\Ariangel\Work\ComprobantesElectrónicos\Proyecto\Comprobantes_Electronicos\obj\Debug\Comprobantes_Electronicos.csproj.CopyComplete

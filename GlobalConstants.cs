@@ -9,5 +9,6 @@ namespace Comprobantes_Electronicos
     public static class GlobalConstants
     {
         public const string testAutSemillaUrl = "https://ecf.dgii.gov.do/TesteCF/Autenticacion/api/Autenticacion/Semilla";
+        public const string testAutValSemillaUrl = "https://ecf.dgii.gov.do/TesteCF/Autenticacion/api/Autenticacion/ValidarSemilla";
     }
 }
