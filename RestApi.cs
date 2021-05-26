@@ -146,13 +146,18 @@ namespace Comprobantes_Electronicos
             var client = new HttpClient();
             var content = new MultipartFormDataContent();
 
+
             client.DefaultRequestHeaders.Add("Accept", "application/json");
-            //client.DefaultRequestHeaders.Add("Content-Type", "multipart/form-data");
+            //client.DefaultRequestHeaders.Add("Content-Type", "text/form-data");
 
 
-            FileStream file = File.OpenRead("C:\\Users\\adiaz\\Desktop\\Ariangel\\Work\\ComprobantesElectrónicos\\response_signed.xml");
-            byte[] Bytes = new byte[file.Length];
-            file.Read(Bytes, 0, Bytes.Length);
+
+            //FileStream file = File.OpenRead("C:\\Users\\adiaz\\Desktop\\Ariangel\\Work\\ComprobantesElectrónicos\\response_signed.xml");
+            FileStream fs = new FileStream("theXml.xml", FileMode.Create);
+            xmlDoc.Save(fs);
+
+            byte[] Bytes = new byte[fs.Length];
+            fs.Read(Bytes, 0, Bytes.Length);
             var fileContent = new ByteArrayContent(Bytes);
             //fileContent.Headers.ContentDisposition = new System.Net.Http
             content.Add(fileContent);
@@ -163,14 +168,12 @@ namespace Comprobantes_Electronicos
             this.response = response.Content.ReadAsStringAsync().Result;
             client.Dispose();
 
+            Console.WriteLine(xmlDoc.InnerXml);
             Console.WriteLine(response);
-
-
+            
 
         }
         }
-
-
 
             
     }

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SemillaModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <valor>gNu00m/t12u3w7LRmBFGY+FkX6HY7XDmCvWPkk+ytfBCgZJ3cdZVCBJnY/KgZUkngul0Cax12fFZ7UtslvKTLDZZEGRGMW6/uDcx2Qel0P27OuLdP6+l9zAutxKbRol/p8b/amYKEY1ptmKwaC07iA==</valor>
+  <fecha>2021-05-26T14:32:54.6658958-04:00</fecha>
+  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+    <SignedInfo>
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+      <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" />
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+        <DigestValue>u/qTKPMy6dbSwvpKWWL+/9nTCMLhBIaTCAAxLh1bWKU=</DigestValue>
+      </Reference>
+    </SignedInfo>
+    <SignatureValue>WcUekgqdSnhxMGq7PbY3baGJGIyiMWmkUCP8j6eeUFlbcAjtlI5cGiySnT3lUCnp7GgfV/1g+B0CoSD8DT193IFD09ekTQSAEdXTQAWCnvck6CWyRi3fVulU/K9gwGC+owiTXqbwgB9ppCPWeEPJ9c4vGq2e8OWTH+RVINg4iXtJr5KUcOfSt2p3A424Mmuh7NADoNwWraFPGZ5PIlRkwpNeURznbnWISOvanso/NaVU7SdzGxNszIX0d7Q4rT7lrNU198aWiKRXWGkOSnBMoMu65pgW6H2fqXF5SKepK2p/Aarxglxie9g1AdLXACLTK401HG8NK0OAl0L2Y1s1vg==</SignatureValue>
+    <KeyInfo>
+      <X509Data>
+        <X509SubjectName>E=adex0494@gmail.com, CN=Ariangel Díaz Espaillat, OU=Development, O=Ariangosky, L=Santiago de Los Caballeros, S=Santiago, C=DO</X509SubjectName>
+        <X509Certificate>MIID3TCCAsWgAwIBAgICEoswDQYJKoZIhvcNAQELBQAwWjELMAkGA1UEBhMCVVMxEzARBgNVBAgTCldhc2hpbmd0b24xEDAOBgNVBAcTB1NlYXR0bGUxJDAiBgNVBAoTG2dldGFDZXJ0IC0gd3d3LmdldGFjZXJ0LmNvbTAeFw0yMTA1MDUxNTU2MzdaFw0yMTA3MDQxNTU2MzdaMIG1MQswCQYDVQQGEwJETzERMA8GA1UECBMIU2FudGlhZ28xIzAhBgNVBAcTGlNhbnRpYWdvIGRlIExvcyBDYWJhbGxlcm9zMRMwEQYDVQQKEwpBcmlhbmdvc2t5MRQwEgYDVQQLEwtEZXZlbG9wbWVudDEgMB4GA1UEAxQXQXJpYW5nZWwgRO1heiBFc3BhaWxsYXQxITAfBgkqhkiG9w0BCQEWEmFkZXgwNDk0QGdtYWlsLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALPcUak/pK/T3pcdOsTdGv5tQcNbG9uOAUTuQk9nJ8+cds4e0hz4NqYW+sF4QDhIAs3BBj+7gXDBaeYd5A0nSWQrRPCTzVDrfjAydCmwMXSp7Wy8LtpLe5uPgQ81q+XSaxpWMcKKeZJ7vkoHA/35AVkdqkbUfg01O5MLz3a5l+EUYqXLj4sFzLzRmxl0CzFTmzlm2k8bfMSU0pgGsqJ0O1E+tqSmLQYJWiVRosJAOCQqDSRunE1KFL0XiRIWjdOoqEFBB2t/xZGn0AN0MehAXz9hNKyrDCEJfrVF7qFfOaJDbcQ57MDzkConFOQn7zfl/AyzR0sY3JSGzgNX1OXFNB0CAwEAAaNRME8wCQYDVR0TBAIwADARBglghkgBhvhCAQEEBAMCBPAwCwYDVR0PBAQDAgUgMCIGA1UdEQQbMBmCF0FyaWFuZ2VsIETtYXogRXNwYWlsbGF0MA0GCSqGSIb3DQEBCwUAA4IBAQCbf0oIPEjvgsnjJyc1fwfKlNb++PfI+XXf/U+2WiX9A7ifv8SlgoEPmhjA5PgHkHfJ/v5PSMOA4qGWK3307U0WWpLhSV6Pyipgii0I0m6pHxaiPRNunWE03he0jjGsAdzGkvRUc/ANOybCYXYfr7yUHl9ypCh1tQn96gMt3J8f9CcTbgdb5Mhfi9GjsVmF6egh4bTOwQCteufP/tDu9Du6RhF7VrngsopNxoPYbp5X7eIN6FCn1aqCI27p0qiaKxDgDyvEC9yV25V5HQpMTwcqcgbAfD8DkeNcbdVe7AVOr1CF+uUphui18QWpYBTizqKvnFAWbma5MwTLxv1dYjnn</X509Certificate>
+      </X509Data>
+    </KeyInfo>
+  </Signature>
+</SemillaModel>
