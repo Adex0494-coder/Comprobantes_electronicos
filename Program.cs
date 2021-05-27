@@ -45,38 +45,42 @@ namespace Comprobantes_Electronicos
 
             //3-----------------------------------Get a SemillaModel xtml and send it signed------------------------------------------
 
-            var restApi = new RestApi(GlobalConstants.testAutSemillaUrl);
-            await restApi.GetRequest();
-            //var xmlDocumnet = XDocument.Parse(restApi.response);
-            //Console.WriteLine(xmlDocumnet);
+            //var restApi = new RestApi(GlobalConstants.testAutSemillaUrl);
+            //await restApi.GetRequest();
+            ////var xmlDocumnet = XDocument.Parse(restApi.response);
+            ////Console.WriteLine(xmlDocumnet);
 
-            XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.LoadXml(restApi.response);
-            xmlDoc.PreserveWhitespace = false;
-
-            X509Certificate2 cert = new X509Certificate2(@"C:\Users\adiaz\Desktop\Ariangel\Work\ComprobantesElectrónicos\AriangelDazEspaillat-2021-05-05-085635.p12", "password", X509KeyStorageFlags.Exportable);
-
-            var xmlSigned = new XmlSigned(xmlDoc, cert);
-            //Console.WriteLine(xmlSigned.xmlDocument.InnerXml);
-
-            restApi = new RestApi(GlobalConstants.testAutValSemillaUrl);
-
-            ////XmlDocument xmlDoc = new XmlDocument();
-            ////xmlDoc.LoadXml(restApi.response);
-            ////xmlDoc.PreserveWhitespace = false;
-
-            //XmlTextReader reader = new XmlTextReader("C:\\Users\\adiaz\\Desktop\\Ariangel\\Work\\ComprobantesElectrónicos\\response_signed.xml");
             //XmlDocument xmlDoc = new XmlDocument();
-            //xmlDoc.Load(reader);
+            //xmlDoc.LoadXml(restApi.response);
             //xmlDoc.PreserveWhitespace = false;
-            //reader.Close();
 
-            ////var xmlDocumnet = XDocument.Parse(xmlSigned.xmlDocument.InnerXml);
+            //X509Certificate2 cert = new X509Certificate2(@"C:\Users\adiaz\Desktop\Ariangel\Work\ComprobantesElectrónicos\AriangelDazEspaillat-2021-05-05-085635.p12", "password", X509KeyStorageFlags.Exportable);
 
-            restApi.PostRequest(xmlSigned.xmlDocument);
-            ////Console.WriteLine(restApi.response);
+            //var xmlSigned = new XmlSigned(xmlDoc, cert);
+            ////Console.WriteLine(xmlSigned.xmlDocument.InnerXml);
+
+            //restApi = new RestApi(GlobalConstants.testAutValSemillaUrl);
+
+            //////XmlDocument xmlDoc = new XmlDocument();
+            //////xmlDoc.LoadXml(restApi.response);
+            //////xmlDoc.PreserveWhitespace = false;
+
+            ////XmlTextReader reader = new XmlTextReader("C:\\Users\\adiaz\\Desktop\\Ariangel\\Work\\ComprobantesElectrónicos\\response_signed.xml");
+            ////XmlDocument xmlDoc = new XmlDocument();
+            ////xmlDoc.Load(reader);
+            ////xmlDoc.PreserveWhitespace = false;
+            ////reader.Close();
+
+            //////var xmlDocumnet = XDocument.Parse(xmlSigned.xmlDocument.InnerXml);
+
+            //restApi.PostRequest(xmlSigned.xmlDocument);
+            //////Console.WriteLine(restApi.response);
+            //Console.ReadLine();
+            var response = await Helper.GetToken(@"C:\Users\adiaz\Desktop\Ariangel\Work\ComprobantesElectrónicos\AriangelDazEspaillat-2021-05-05-085635.p12", "password");
+            Console.WriteLine(response);
+
+
             Console.ReadLine();
-
         }
     }
 }

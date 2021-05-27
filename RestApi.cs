@@ -32,7 +32,7 @@ namespace Comprobantes_Electronicos
             client.Dispose();
         }
 
-        public async void PostRequest(XmlDocument xmlDoc)
+        public async Task<string> PostRequest(XmlDocument xmlDoc)
         {
             //1
             //string json = JsonConvert.SerializeXmlNode(xmlDoc);
@@ -143,33 +143,41 @@ namespace Comprobantes_Electronicos
 
 
             //6
-            var client = new HttpClient();
-            var content = new MultipartFormDataContent();
+            try
+            {
+                var client = new HttpClient();
+                var content = new MultipartFormDataContent();
 
 
-            client.DefaultRequestHeaders.Add("Accept", "application/json");
-            //client.DefaultRequestHeaders.Add("Content-Type", "text/form-data");
+                client.DefaultRequestHeaders.Add("Accept", "application/json");
+                //client.DefaultRequestHeaders.Add("Content-Type", "text/form-data");
 
 
 
-            //FileStream file = File.OpenRead("C:\\Users\\adiaz\\Desktop\\Ariangel\\Work\\ComprobantesElectrónicos\\response_signed.xml");
-            FileStream fs = new FileStream("theXml.xml", FileMode.Create);
-            xmlDoc.Save(fs);
+                //FileStream file = File.OpenRead("C:\\Users\\adiaz\\Desktop\\Ariangel\\Work\\ComprobantesElectrónicos\\response_signed.xml");
+                FileStream fs = new FileStream("theXml.xml", FileMode.Create);
+                xmlDoc.Save(fs);
 
-            byte[] Bytes = new byte[fs.Length];
-            fs.Read(Bytes, 0, Bytes.Length);
-            var fileContent = new ByteArrayContent(Bytes);
-            //fileContent.Headers.ContentDisposition = new System.Net.Http
-            content.Add(fileContent);
+                byte[] Bytes = new byte[fs.Length];
+                fs.Read(Bytes, 0, Bytes.Length);
+                var fileContent = new ByteArrayContent(Bytes);
+                //fileContent.Headers.ContentDisposition = new System.Net.Http
+                content.Add(fileContent);
 
-            var response = await client.PostAsync(url, content);
+                var response = await client.PostAsync(url, content);
 
 
-            this.response = response.Content.ReadAsStringAsync().Result;
-            client.Dispose();
+                this.response = response.Content.ReadAsStringAsync().Result;
+                client.Dispose();
 
-            Console.WriteLine(xmlDoc.InnerXml);
-            Console.WriteLine(response);
+                Console.WriteLine(xmlDoc.InnerXml);
+
+                return this.response;
+            }
+            catch (Exception e) {
+                return e.Message;
+            }
+
             
 
         }
