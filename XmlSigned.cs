@@ -48,7 +48,7 @@ namespace Comprobantes_Electronicos
             //Set KeyInfo
             var keyInfo = new KeyInfo();
             var clause = new KeyInfoX509Data();
-            clause.AddSubjectName(cert.Subject);
+            //clause.AddSubjectName(cert.Subject);
             clause.AddCertificate(cert);
             keyInfo.AddClause(clause);
 
@@ -65,6 +65,5 @@ namespace Comprobantes_Electronicos
 
         }
     }
-
 
 }

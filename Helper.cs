@@ -22,6 +22,10 @@ namespace Comprobantes_Electronicos
             X509Certificate2 cert = new X509Certificate2(certPath, certPass, X509KeyStorageFlags.Exportable);
             var xmlSigned = new XmlSigned(xmlDoc, cert);
 
+            //Save xml file in path
+                Console.WriteLine(xmlSigned.xmlDocument.InnerXml);
+                xmlSigned.xmlDocument.Save(@"C:\Users\adiaz\Desktop\test.xml");
+
             restApi.url = GlobalConstants.testAutValSemillaUrl; 
             var response = await restApi.PostRequest(xmlSigned.xmlDocument);
 

@@ -76,11 +76,11 @@ namespace Comprobantes_Electronicos
             //restApi.PostRequest(xmlSigned.xmlDocument);
             //////Console.WriteLine(restApi.response);
             //Console.ReadLine();
-            var response = await Helper.GetToken(@"C:\Users\adiaz\Desktop\Ariangel\Work\ComprobantesElectrónicos\AriangelDazEspaillat-2021-05-05-085635.p12", "password");
+            var response = await Helper.GetToken(@"C:\Users\adiaz\Desktop\Ariangel\Work\ComprobantesElectrónicos\kitComprobantesElectronico\certificado.p12", "arline78");
             Console.WriteLine(response);
 
-            var theXml = new XmlCreator();
-            Console.WriteLine(theXml.xmlString);
+            //var theXml = new XmlCreator();
+            //Console.WriteLine(theXml.xmlString);
             Console.ReadLine();
         }
     }

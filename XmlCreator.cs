@@ -20,7 +20,6 @@ namespace Comprobantes_Electronicos
             XmlDocument doc = new XmlDocument();
             using (XmlWriter writer = doc.CreateNavigator().AppendChild())
             {
-
                 writer.WriteStartElement("book");
                 writer.WriteElementString("title", "Graphics Programming using GDI+");
                 writer.WriteElementString("author", "Mahesh Chand");

@@ -149,7 +149,7 @@ namespace Comprobantes_Electronicos
                 var content = new MultipartFormDataContent();
 
 
-                client.DefaultRequestHeaders.Add("Accept", "application/json");
+                client.DefaultRequestHeaders.Add("accept", "application/json");
                 //client.DefaultRequestHeaders.Add("Content-Type", "text/form-data");
 
 
@@ -164,10 +164,10 @@ namespace Comprobantes_Electronicos
                 //fileContent.Headers.ContentDisposition = new System.Net.Http
                 content.Add(fileContent);
 
-                var response = await client.PostAsync(url, content);
+                var theResponse = await client.PostAsync(url, content);
 
 
-                this.response = response.Content.ReadAsStringAsync().Result;
+                this.response = theResponse.Content.ReadAsStringAsync().Result;
                 client.Dispose();
 
                 Console.WriteLine(xmlDoc.InnerXml);
@@ -177,8 +177,6 @@ namespace Comprobantes_Electronicos
             catch (Exception e) {
                 return e.Message;
             }
-
-            
 
         }
         }
