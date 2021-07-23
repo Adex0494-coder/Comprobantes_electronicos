@@ -76,8 +76,8 @@ namespace Comprobantes_Electronicos
             //restApi.PostRequest(xmlSigned.xmlDocument);
             //////Console.WriteLine(restApi.response);
             //Console.ReadLine();
-            var response = await Helper.GetToken(@"C:\Users\adiaz\Desktop\Ariangel\Work\ComprobantesElectrónicos\kitComprobantesElectronico\certificado.p12", "arline78");
-            Console.WriteLine(response);
+            var semillaModelToken = await Helper.GetToken(@"C:\Users\adiaz\Desktop\Ariangel\Work\ComprobantesElectrónicos\kitComprobantesElectronico\certificado.p12", "arline78");
+            Console.WriteLine(semillaModelToken);
 
             //var theXml = new XmlCreator();
             //Console.WriteLine(theXml.xmlString);
