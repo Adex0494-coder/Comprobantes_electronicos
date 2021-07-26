@@ -13,7 +13,7 @@ namespace Comprobantes_Electronicos
         public static async Task<string> GetToken(string certPath,string certPass)
         {
             var restApi = new RestApi(GlobalConstants.certAutSemillaUrl);
-            await restApi.GetRequest();
+            await restApi.GetRequest(null,null);
 
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.LoadXml(restApi.response);
@@ -27,7 +27,7 @@ namespace Comprobantes_Electronicos
                 xmlSigned.xmlDocument.Save(@"C:\Users\adiaz\Desktop\test.xml");
 
             restApi.url = GlobalConstants.certAutValSemillaUrl; 
-            var response = await restApi.PostRequest((@"C:\Users\adiaz\Desktop\test.xml"),null);
+            var response = await restApi.PostRequest((@"C:\Users\adiaz\Desktop\test.xml"),null,null);
 
             return response;
         }
@@ -47,9 +47,17 @@ namespace Comprobantes_Electronicos
             xmlSigned.xmlDocument.Save(xmlToSavePath);
 
             var restApi = new RestApi(GlobalConstants.certReceNcf);
-            var response = await restApi.PostRequest(xmlToSavePath,token);
+            var response = await restApi.PostRequest(xmlToSavePath,token,null);
 
             return response;
+        }
+
+        public static async Task<string> ConsultEncfState(string token, string trackId)
+        {
+            var restApi = new RestApi(GlobalConstants.certConsultaResultado);
+            await restApi.GetRequest(token, trackId);
+
+            return restApi.response;
         }
     }
 }

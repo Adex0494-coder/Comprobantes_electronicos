@@ -24,33 +24,55 @@ namespace Comprobantes_Electronicos
         }
 
         //Get Request usando la url y guardando la respuesta en la propiedad response.
-        public async Task GetRequest()
+        public async Task GetRequest(string token,string trackId)
         {
+
             var client = new HttpClient();
-            client.DefaultRequestHeaders.Add("Accept", "application/xml");
+            if (trackId == null)
+            {
+                client.DefaultRequestHeaders.Add("Accept", "application/xml");
+            }
+            else
+            {
+                client.DefaultRequestHeaders.Add("Accept", "application/json");
+            }
+
+            if (trackId != null)
+            {
+                client.DefaultRequestHeaders.Add("authorization", "Bearer " + token);
+                url += "?TrackId=" + trackId;
+            }
 
             this.response = await client.GetStringAsync(url);
             client.Dispose();
         }
 
         //public async Task<string> PostRequest(XmlDocument xmlDoc)
-        public async Task<string> PostRequest(string path, string token)
+        public async Task<string> PostRequest(string path, string token, string trackId)
         {
             try
             {
                 HttpClient apiCallClient = new HttpClient();
-                String restCallURL = url;
+
+               
+                string restCallURL = url;
+
                 HttpRequestMessage apirequest = new HttpRequestMessage(HttpMethod.Post, restCallURL); // post
                 apirequest.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                //apirequest.Headers.Add("authorization", "Bearer YOUR TOKEN");
+                if(token !=null)
+                {
+                    string authorization = "Bearer " + token;
+                    apirequest.Headers.Add("authorization", authorization);
+                }
 
-                MultipartFormDataContent test = new MultipartFormDataContent();
-                //test.Add(new StringContent("Bad"), "tags");
-                //test.Add(new StringContent("true"), "displayreferencetext");
-                //test.Add(new StringContent("0.63"), "similaritythreshold");
-                test.Add(new StreamContent(File.OpenRead(path)), "xml", (new FileInfo(path).Name));
-                apirequest.Content = test;
+                    MultipartFormDataContent test = new MultipartFormDataContent();
+                    //test.Add(new StringContent("Bad"), "tags");
+                    //test.Add(new StringContent("true"), "displayreferencetext");
+                    //test.Add(new StringContent("0.63"), "similaritythreshold");
+                    test.Add(new StreamContent(File.OpenRead(path)), "xml", (new FileInfo(path).Name));
+                    apirequest.Content = test;
+   
 
                 HttpResponseMessage apiCallResponse = await apiCallClient.SendAsync(apirequest);
 
@@ -60,8 +82,12 @@ namespace Comprobantes_Electronicos
 
 
                 dynamic json = JsonConvert.DeserializeObject(responseString);
-                string token = json.token;
 
+                if (token == null)
+                {
+                    string tokenGot = json.token;
+                    return tokenGot;
+                }
                 //byte[] doc = null;
                 //MemoryStream ms = new MemoryStream();
                 //s.CopyTo(ms);
@@ -70,7 +96,7 @@ namespace Comprobantes_Electronicos
                 //Console.WriteLine(ms);
                 //File.WriteAllBytes(@"C:\Users\adiaz\Desktop\rez.docx", doc);
 
-                return token;
+                return json.trackId;
             }
             catch
             {

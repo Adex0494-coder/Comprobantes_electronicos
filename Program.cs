@@ -79,6 +79,14 @@ namespace Comprobantes_Electronicos
             var semillaModelToken = await Helper.GetToken(@"C:\Users\adiaz\Desktop\Ariangel\Work\ComprobantesElectrónicos\kitComprobantesElectronico\certificado.p12", "arline78");
             Console.WriteLine(semillaModelToken);
 
+            string xmlName = "130615578E310000000002.xml";
+
+            var trackId = await Helper.SignSendXmlNcf(@"C:\Users\adiaz\Desktop\Ariangel\Work\ComprobantesElectrónicos\kitComprobantesElectronico\certificado.p12", "arline78", @"C:\Users\adiaz\Desktop\encfXmlTemplates\" + xmlName, semillaModelToken, @"C:\Users\adiaz\Desktop\" + xmlName);
+            Console.WriteLine(trackId);
+
+            var encfState = await Helper.ConsultEncfState(semillaModelToken, trackId);
+            Console.WriteLine(encfState);
+
             //var theXml = new XmlCreator();
             //Console.WriteLine(theXml.xmlString);
             Console.ReadLine();
